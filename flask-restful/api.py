@@ -13,7 +13,7 @@ class HelloWorld(Resource):
     def get(self):
         connection = mysql.connect()
         cursor = connection.cursor()
-        cursor.execute('''SELECT * FROM layer''')
+        cursor.execute('''SELECT id, name FROM layer''')
         ret = cursor.fetchall()
         layers = []
         for entry in ret:
