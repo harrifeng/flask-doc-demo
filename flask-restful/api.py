@@ -42,8 +42,8 @@ class HelloWorld(Resource):
                     "status": entry.status,
                     "product_id": entry.product_id,
                     "params": entry.params,
-                    # "create_time": entry.create_time,
-                    # "update_time": entry.update_time,
+                    "create_time": entry.create_time.strftime('%s'),
+                    "update_time": entry.update_time.strftime('%s'),
                 }
             )
         return layers
